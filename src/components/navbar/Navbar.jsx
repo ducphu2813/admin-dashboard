@@ -1,10 +1,29 @@
 import "./navbar.scss"
+import { useLocation } from "react-router-dom";
+
 export const Navbar = () => {
+    const location = useLocation();
+
+    let title;
+    switch (location.pathname) {
+        case '/':
+            title = 'Home';
+            break;
+        case '/users':
+            title = 'Users';
+            break;
+        case '/products':
+            title = 'Products';
+            break;
+        default:
+            title = 'React Admin DashBoard';
+    }
+
     return (
         <div className="navbar">
             <div className="logo">
                 <img src="./logo.svg" alt=""/>
-                <span>React Admin DashBoard</span>
+                <span>React Admin DashBoard - {title}</span>
             </div>
 
             <div className="icons">

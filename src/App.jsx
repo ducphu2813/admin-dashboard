@@ -5,7 +5,7 @@ import {Products} from "./pages/products/Products.jsx";
 import {
     createBrowserRouter,
     RouterProvider,
-    Outlet, Link,
+    Outlet,
 } from "react-router-dom";
 import {Navbar} from "./components/navbar/Navbar.jsx";
 import {Footer} from "./components/footer/Footer.jsx";
@@ -27,10 +27,9 @@ function App() {
 
                   <div className="contentContainer">
                     <Outlet />
-                      <Footer/>
                   </div>
-
               </div>
+              <Footer/>
           </div>
         );
     }
