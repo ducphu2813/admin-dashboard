@@ -1,0 +1,38 @@
+.container {
+
+    //phần padding xuống cho vừa navbar
+    //padding-top: 74px;
+
+    .menuContainer {
+        /*phần scroll cho menu*/
+        //scrollbar-width: thin;
+
+        //chỉnh chiều cao của thanh scroll
+        height: 100vh;
+        overflow-y: auto;
+
+        /* For Chrome, Edge, and Safari */
+        &::-webkit-scrollbar {
+            width: 10px; /* width of the entire scrollbar */
+        }
+
+        //
+        &::-webkit-scrollbar-track {
+            /* color of the tracking area */
+            background: #2c2c2c;
+        }
+
+        //
+        &::-webkit-scrollbar-thumb {
+            /* color of the scroll thumb */
+            background-color: rgba(155, 155, 155, 0.7);
+
+            /* roundness of the scroll thumb */
+            border-radius: 20px;
+
+            /* creates padding around scroll thumb */
+            border: 10px solid transparent;
+        }
+    }
+
+}

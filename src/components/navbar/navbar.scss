@@ -1,12 +1,62 @@
+@import "../../styles/variable.scss";
+
 .navbar{
 
-}
+  //phần chỉnh dính top
+  //position: fixed;
+  //top: 0;
+  //background-color: $main-bg;
 
-.logo{
+
+  width: 100%;
+  padding: 20px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
+  }
+
+  .icons{
+    align-items: center;
+    display: flex;
+    gap: 20px;
+
+    .notification{
+      position: relative;
+
+      span {
+        font-size: 12px;
+        background-color: red;
+        color: white;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .user{
+      align-items: center;
+      display: flex;
+      gap: 10px;
+
+      img{
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 
-.logo img{
-    width: 35px;
-    height: 35px;
-}

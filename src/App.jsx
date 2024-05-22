@@ -1,12 +1,11 @@
-
-import './index.css'
+import './index.scss'
 import Home from "./pages/home/Home.jsx";
 import {Users} from "./pages/users/Users.jsx";
 import {Products} from "./pages/products/Products.jsx";
 import {
     createBrowserRouter,
     RouterProvider,
-    Outlet,
+    Outlet, Link,
 } from "react-router-dom";
 import {Navbar} from "./components/navbar/Navbar.jsx";
 import {Footer} from "./components/footer/Footer.jsx";
@@ -28,9 +27,10 @@ function App() {
 
                   <div className="contentContainer">
                     <Outlet />
+                      <Footer/>
                   </div>
+
               </div>
-              <Footer/>
           </div>
         );
     }
