@@ -2,6 +2,7 @@ import "./navbar.scss"
 import { useLocation } from "react-router-dom";
 
 export const Navbar = () => {
+    console.log("Navbar");
     const location = useLocation();
 
     let title;
