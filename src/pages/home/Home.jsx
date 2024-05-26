@@ -1,6 +1,12 @@
 import "./home.scss"
 import {TopBox} from "../../components/topBox/TopBox.jsx";
 import {ChartBox} from "../../components/chartBox/ChartBox.jsx";
+
+import {chartBoxUser} from "../../data.js";
+import {chartBoxProduct} from "../../data.js";
+import {chartBoxRevenue} from "../../data.js";
+import {chartBoxConversion} from "../../data.js";
+
 const Home = () => {
     console.log("Home");
     return (
@@ -10,21 +16,21 @@ const Home = () => {
             </div>
 
             <div className="box box2">
-                <ChartBox />
+                <ChartBox {...chartBoxUser}/>
             </div>
 
             <div className="box box3">
-                <ChartBox />
+                <ChartBox {...chartBoxProduct}/>
             </div>
 
             <div className="box box4">Box4</div>
 
             <div className="box box5">
-                <ChartBox />
+                <ChartBox {...chartBoxRevenue}/>
             </div>
 
             <div className="box box6">
-                <ChartBox />
+                <ChartBox {...chartBoxConversion}/>
             </div>
 
             <div className="box box7">Box7</div>
