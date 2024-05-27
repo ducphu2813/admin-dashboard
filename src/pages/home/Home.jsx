@@ -6,6 +6,11 @@ import {chartBoxUser} from "../../data.js";
 import {chartBoxProduct} from "../../data.js";
 import {chartBoxRevenue} from "../../data.js";
 import {chartBoxConversion} from "../../data.js";
+import {barChartBoxVisit} from "../../data.js";
+import {barChartBoxRevenue} from "../../data.js";
+import {BarChartBox} from "../../components/barChartBox/BarChartBox.jsx";
+import {PieChartBox} from "../../components/pieChartBox/PieChartBox.jsx";
+import {BigChartBox} from "../../components/bigChartBox/BigChartBox.jsx";
 
 const Home = () => {
     console.log("Home");
@@ -23,7 +28,9 @@ const Home = () => {
                 <ChartBox {...chartBoxProduct}/>
             </div>
 
-            <div className="box box4">Box4</div>
+            <div className="box box4">
+                <PieChartBox />
+            </div>
 
             <div className="box box5">
                 <ChartBox {...chartBoxRevenue}/>
@@ -33,11 +40,17 @@ const Home = () => {
                 <ChartBox {...chartBoxConversion}/>
             </div>
 
-            <div className="box box7">Box7</div>
+            <div className="box box7">
+                <BigChartBox />
+            </div>
 
-            <div className="box box8">Box8</div>
+            <div className="box box8">
+                <BarChartBox {...barChartBoxVisit}/>
+            </div>
 
-            <div className="box box9">Box9</div>
+            <div className="box box9">
+                <BarChartBox {...barChartBoxRevenue}/>
+            </div>
 
         </div>
     )

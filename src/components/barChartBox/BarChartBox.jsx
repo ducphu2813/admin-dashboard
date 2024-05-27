@@ -1,9 +1,24 @@
 import "./barChartBox.scss";
+import {Bar, BarChart, ResponsiveContainer, Tooltip} from "recharts";
 
-export const BarChartBox = () => {
+
+export const BarChartBox = (props) => {
     return (
-        <div>
-            BarChartBox
+        <div className="barChartBox">
+            <h1>{props.title}</h1>
+            <div className="chart">
+                <ResponsiveContainer width="100%" height={150}>
+                    <BarChart data={props.chartData}>
+                        <Tooltip
+                            contentStyle={{background: "#2a3447", borderRadius: "5px"}}
+                            labelStyle={{display: "none"}}
+                            cursor={{fill: "none"}}
+                        />
+
+                        <Bar dataKey={props.dataKey} fill={props.color} />
+                    </BarChart>
+                </ResponsiveContainer>
+            </div>
         </div>
     )
 }
