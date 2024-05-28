@@ -1,4 +1,15 @@
-.products{
-  //height: 1000px;
-  //background-color: lightpink;
+.product{
+
+  .info{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+
+    button{
+      padding: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
 }

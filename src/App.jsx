@@ -12,6 +12,8 @@ import {Footer} from "./components/footer/Footer.jsx";
 import {Menu} from "./components/menu/Menu.jsx";
 import {Login} from "./pages/login/Login.jsx";
 import "./styles/global.scss";
+import {User} from "./pages/user/User.jsx";
+import {Product} from "./pages/product/Product.jsx";
 function App() {
 
     //tạo layout
@@ -49,9 +51,17 @@ function App() {
                     element: <Users />
                 },
                 {
+                    path: "users/:id",
+                    element: <User />
+                },
+                {
                     path: "products",
                     element: <Products />
-                }
+                },
+                {
+                    path: "products/:id",
+                    element: <Product />
+                },
             ]
         },
         {

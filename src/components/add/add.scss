@@ -1,3 +1,80 @@
-.add{
+@import "./../../styles/variable.scss";
 
+.add{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal{
+    padding: 50px;
+    border-radius: 10px;
+    background-color: $main-bg;
+    position: relative;
+
+    h1{
+      margin-bottom: 40px;
+      font-size: 24px;
+      color: $soft-color
+    }
+
+    .close{
+      width: 36px;
+      height: 36px;
+      padding: 5px;
+      font-size: 16px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover{
+        background-color: rgba(254, 0, 0, 0.6);
+      }
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    form{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 500px;
+      justify-content: space-between;
+
+      .item{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+
+        label{
+          font-size: 18px;
+          color: $soft-color;
+        }
+
+        input{
+          padding: 10px;
+          outline: none;
+          border: 1px solid $soft-color;
+          border-radius: 5px;
+          font-size: 16px;
+          color: $main-color;
+          background-color: transparent;
+        }
+      }
+
+      button{
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    }
+  }
 }

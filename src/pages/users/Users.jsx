@@ -2,6 +2,8 @@ import "./users.scss"
 import {DataTable} from "../../components/dataTable/DataTable.jsx";
 import * as React from "react";
 import {userRows} from "../../data.js";
+import {useState} from "react";
+import {Add} from "../../components/add/Add.jsx";
 
 
 const columns = [
@@ -54,17 +56,22 @@ const columns = [
 
 
 export const Users = () => {
+
+    const [open, setOpen] = useState(false);
+
     console.log("Users");
     return (
         <div className="user">
             <div className="info">
                 <h1>Users</h1>
-                <button>Add New User</button>
+                <button onClick={() => setOpen(true)}>Add New User</button>
             </div>
 
             <div className="table">
                 <DataTable slug="users" columns={columns} rows={userRows}/>
             </div>
+
+            {open && <Add slug="user" columns={columns} setOpen={setOpen}/>}
         </div>
     )
 }

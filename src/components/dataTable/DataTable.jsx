@@ -1,14 +1,13 @@
 import * as React from 'react';
 import "./dataTable.scss";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
-import {userRows} from "../../data.js";
 import {Link} from "react-router-dom";
 
 
 export const DataTable = ({slug, columns, rows}) => {
 
     const handleDelete = (id) => {
-        console.log("Delete", id);
+        console.log("Delete "+ slug+ " " +id);
     }
 
     const actionColumns = {
@@ -33,7 +32,7 @@ export const DataTable = ({slug, columns, rows}) => {
         <div className="dataTable">
             <DataGrid
                 className="dataGrid"
-                rows={userRows}
+                rows={rows}
                 columns={[...columns, actionColumns]}
                 initialState={{
                     pagination: {
@@ -49,7 +48,7 @@ export const DataTable = ({slug, columns, rows}) => {
                         quickFilterProps: {debounceMs: 500},
                     },
                 }}
-                pageSizeOptions={[5]}
+                pageSizeOptions={[5, 10, 15, 20]}
                 checkboxSelection
                 disableRowSelectionOnClick
             />
