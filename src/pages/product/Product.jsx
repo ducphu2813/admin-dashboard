@@ -1,5 +1,6 @@
 import "./product.scss";
 import {DetailPage} from "../../components/detailPage/DetailPage.jsx";
+import {singleProduct} from "../../data.js";
 
 export const Product = () => {
 
@@ -8,7 +9,7 @@ export const Product = () => {
 
     return (
         <div className="product">
-            <DetailPage />
+            <DetailPage {...singleProduct}/>
         </div>
     )
 }
